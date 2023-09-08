@@ -1,0 +1,25 @@
+@import "../../../../mixins";
+
+.header-container {
+  @include flex(center, space-between);
+  height: 10vh;
+  padding: 0 var(--padding1);
+
+  h1 {
+    color: var(--red);
+  }
+
+  div {
+    @include flex(center, space-between, row);
+
+    p {
+      margin: 0;
+      color: var(--red);
+    }
+
+    ul {
+      @include flex(center, space-between, row);
+      list-style: none;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -19,7 +20,16 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
+  ],
+  exports: [
+    InicioComponent,
+    InstitucionalComponent,
+    ServiciosComponent,
+    ContactoComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class RoutesModule { }

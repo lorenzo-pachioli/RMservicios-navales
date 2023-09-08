@@ -1,1 +1,13 @@
-<p>header works!</p>
+<div class="header-container" >
+  <h1>RM servicios navales</h1>
+
+  <div>
+    <ul>
+      <li *ngFor="let item of menu" >
+            <button mat-flat-button color="accent" routerLink="{{ item }}" routerLinkActive="active">
+              {{ item }}
+            </button>
+      </li>
+    </ul>
+  </div>
+</div>

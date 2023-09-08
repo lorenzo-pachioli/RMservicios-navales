@@ -1,0 +1,7 @@
+@import "../../../../mixins";
+
+
+.footer-container {
+  height: 5vh;
+  @include flex(center, center);
+}
