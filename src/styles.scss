@@ -1,35 +1,29 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
+@use 'sass:map';
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 $RMservicios-navales-primary: mat.define-palette(mat.$indigo-palette);
-$RMservicios-navales-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
+$RMservicios-navales-accent: mat.define-palette(mat.$blue-gray-palette, A200, A100, A400);
 $RMservicios-navales-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$RMservicios-navales-theme: mat.define-light-theme((color: (primary: $RMservicios-navales-primary,
+$RMservicios-navales-light-theme: mat.define-light-theme((color: (primary: $RMservicios-navales-primary,
         accent: $RMservicios-navales-accent,
         warn: $RMservicios-navales-warn,
       )));
+$RMservicios-navales-dark-theme: mat.define-dark-theme((color: (primary: $RMservicios-navales-primary,
+        accent: $RMservicios-navales-accent,
+        warn: $RMservicios-navales-warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($RMservicios-navales-theme);
+@include mat.core-theme($RMservicios-navales-dark-theme);
+@include mat.button-theme($RMservicios-navales-dark-theme);
 
-/* You can add global styles to this file, and also import other style files */
+@media (prefers-color-scheme: light) {
+  @include mat.core-color($RMservicios-navales-light-theme);
+  @include mat.button-color($RMservicios-navales-light-theme);
+}
 
 html,
 body {
@@ -41,8 +35,57 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary900);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary500);
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border: 0px none var(--primary900);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --primary50: #E1F5FE;
+  --primary500: #03A9F4;
+  --primary900: #01579B;
+
+  --gap1: 10px;
+  --gap2: 20px;
+
+  --margin1: 10px;
+  --margin2: 20px;
+
+  --radius1: 10px;
+  --radius2: 20px;
+
+  --padding1: 5px;
+  --padding2: 10px;
+  --padding3: 20px;
+
+  --red: #EC407A;
+
+  button {
+    cursor: pointer;
+  }
 }
