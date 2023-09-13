@@ -4,4 +4,10 @@
 .footer-container {
   height: 5vh;
   @include flex(center, center);
+  background-color: var(--primary900);
+  color: white;
+
+  p {
+    margin: 0;
+  }
 }

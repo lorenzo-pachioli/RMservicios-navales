@@ -1,1 +1,28 @@
-<div class="inicio-container ">inicio works!</div>
+<div class="inicio-container ">
+  <div class="inicio-landing">
+    <img src="../../../../assets/img/bg-masthead2.jpg" alt="" />
+    <div class="filter"></div>
+    <div class="title fadeInUp">
+      <h1 >Somos líderes en reparación y 
+        mantenimiento de motores de barcos para un 
+        rendimiento marino confiable
+      </h1>
+      <button mat-raised-button color="primary" (click)="scrollDown()">Conózcanos</button>
+    </div>
+  </div>
+  <div class="objetivos-container">
+    <h2>Nuestros objetivos</h2>
+    <div class="objetivos">
+        <ul *ngFor="let item of objetivos" >
+          <li>
+            <mat-card>
+              <mat-card-content>
+                <mat-icon>{{item.svg}}</mat-icon>
+              </mat-card-content>
+              <mat-card-title>{{item.text}}</mat-card-title>
+            </mat-card>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
