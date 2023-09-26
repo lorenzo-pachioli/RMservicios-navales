@@ -4,23 +4,69 @@
   @include flex(center, space-between);
   height: 10vh;
   padding: 0 var(--padding1);
+  background-color: var(--grey);
+
+  .header-title {
+    gap: var(--gap1);
+  }
 
   h1 {
-    /* color: var(--primary900); */
+    color: var(--primary500);
     margin: 0;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  img {
+    height: 100%;
   }
 
   div {
     @include flex(center, space-between, row);
-
-    p {
-      margin: 0;
-      color: var(--red);
-    }
+    height: 100%;
 
     ul {
       @include flex(center, space-between, row);
       list-style: none;
+      gap: var(--gap1);
+    }
+
+    button {
+      min-width: 100px;
+      background-image: linear-gradient(to right,
+          var(--primary900),
+          var(--primary900) 50%,
+          var(--dark_grey) 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      display: inline-block;
+      padding: 5px var(--padding2);
+      position: relative;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    button:before {
+      content: '';
+      background: var(--primary900);
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-position: 0;
+    }
+
+    button:hover::before {
+      width: 100%;
     }
   }
 }

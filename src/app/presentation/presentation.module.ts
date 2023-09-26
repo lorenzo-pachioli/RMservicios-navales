@@ -14,6 +14,7 @@ import { MotoresReparamosComponent } from './components/motores-reparamos/motore
 import { MapaComponent } from './components/mapa/mapa.component';
 import { FormularioContactoComponent } from './components/formulario-contacto/formulario-contacto.component';
 import { InfoContactoComponent } from './components/info-contacto/info-contacto.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -35,7 +36,12 @@ import { InfoContactoComponent } from './components/info-contacto/info-contacto.
     InfoContactoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
+  ],
+  exports: [
+    ObjetivosComponent,
+    MisionVisionComponent
   ]
 })
 export class PresentationModule { }

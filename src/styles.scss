@@ -32,7 +32,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -67,7 +67,7 @@ body {
 
 :root {
   --primary50: #E1F5FE;
-  --primary500: #03A9F4;
+  --primary500: #040A9D;
   --primary900: #01579B;
 
   --gap1: 10px;
@@ -75,6 +75,8 @@ body {
 
   --margin1: 10px;
   --margin2: 20px;
+  --margin3: 50px;
+
 
   --radius1: 10px;
   --radius2: 20px;
@@ -84,6 +86,9 @@ body {
   --padding3: 20px;
 
   --red: #EC407A;
+  --ligth_grey: #EEEEEE;
+  --grey: #E0E0E0;
+  --dark_grey: #424242;
 
   button {
     cursor: pointer;

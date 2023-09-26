@@ -1,0 +1,25 @@
+@import "../../../../mixins";
+
+.mision-vision-container {
+  @include flex(center, space-evenly, row);
+  margin: 0;
+  width: 100%;
+  gap: var(--gap2);
+  border: 2px solid var(--ligth_grey);
+
+  mat-card-title {
+    @include flex(center, center);
+    color: white;
+    width: 40vw;
+    height: 15vh;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 40px;
+  }
+
+  mat-card-content {
+    width: 40vw;
+    font-size: 20px;
+    color: var(--dark_grey);
+  }
+}

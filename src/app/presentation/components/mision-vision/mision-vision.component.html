@@ -1,1 +1,6 @@
-<p>mision-vision works!</p>
+<mat-card class="mision-vision-container" [ngStyle]="{'flex-direction': flexDirection()}">
+  <mat-card-title [ngStyle]="{'background-color': backgroundcolor}">{{title}}</mat-card-title>
+  <mat-card-content>
+    {{text}}
+  </mat-card-content>
+</mat-card>

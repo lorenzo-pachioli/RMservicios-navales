@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { PresentationModule } from '../presentation/presentation.module';
 
 
 
@@ -23,7 +24,8 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    PresentationModule
   ],
   exports: [
     InicioComponent,

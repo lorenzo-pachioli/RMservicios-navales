@@ -10,19 +10,21 @@
       <button mat-raised-button color="primary" (click)="scrollDown()">Conózcanos</button>
     </div>
   </div>
+
+  
   <div class="objetivos-container">
     <h2>Nuestros objetivos</h2>
     <div class="objetivos">
         <ul *ngFor="let item of objetivos" >
           <li>
-            <mat-card>
-              <mat-card-content>
-                <mat-icon>{{item.svg}}</mat-icon>
-              </mat-card-content>
-              <mat-card-title>{{item.text}}</mat-card-title>
-            </mat-card>
+            <app-objetivos [objetivo]="item"></app-objetivos>
           </li>
         </ul>
     </div>
+  </div>
+
+  <div class="mision-container">
+    <app-mision-vision title="Mision" [text]="mision" backgroundcolor="var(--primary500)"></app-mision-vision>
+    <app-mision-vision title="Vision" [text]="vision" backgroundcolor="var(--primary900)"></app-mision-vision>
   </div>
 </div>

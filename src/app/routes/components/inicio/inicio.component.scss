@@ -41,13 +41,35 @@
 
   .objetivos-container {
     padding: var(--padding3);
+    margin-top: var(--margin3);
+
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--dark_grey);
+      border-bottom: 2px solid var(--ligth_grey);
+    }
 
     .objetivos {
       @include flex(center, space-between, row);
+      gap: var(--gap1);
 
       ul {
         list-style: none;
       }
+    }
+  }
+
+  .mision-container {
+    width: 100%;
+    padding: var(--padding3);
+    @include flex(flex-start, center, column);
+    margin-top: var(--margin3);
+    height: fit-content;
+    gap: var(--gap2);
+
+    app-mision-vision {
+      width: 100%;
     }
   }
 
