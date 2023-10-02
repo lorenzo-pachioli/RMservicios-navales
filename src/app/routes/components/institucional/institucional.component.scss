@@ -90,4 +90,70 @@
   .clientes-subcontainer {
     @include flex(center, space-evenly, row);
   }
+
+
+  .buques-container {
+    padding: var(--padding3);
+    margin-top: var(--margin2);
+
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--dark_grey);
+      border-bottom: 2px solid var(--ligth_grey);
+    }
+
+    .buques {
+      @include flex(flex-start, space-between, row);
+      flex-wrap: wrap;
+      gap: var(--gap1);
+      color: var(--primary500);
+      width: fit-content;
+      height: fit-content;
+
+      ul {
+        list-style: none;
+
+        li {
+          height: 20vw;
+          width: 30vw;
+          position: relative;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .buques-subcontainer {
+    @include flex(center, space-evenly, row);
+
+    img {
+      height: 20vw;
+      width: 30vw;
+      object-fit: cover;
+    }
+
+    .buque-nombre {
+      position: absolute;
+      top: 0;
+      height: 20vw;
+      width: 30vw;
+      display: none;
+      background-color: var(--dark_grey);
+      opacity: 80%;
+
+      p {
+        font-size: var(--font1);
+        color: var(--ligth_grey);
+      }
+    }
+
+    img:hover~.buque-nombre {
+      @include flex(center, center);
+    }
+
+    .buque-nombre:hover {
+      @include flex(center, center);
+    }
+  }
 }

@@ -43,6 +43,22 @@
         </ul>
       </div>
     </div>
-   
   </div>
+
+  <div class="buques-container">
+    <h2>Listado de buques</h2>
+    <div class="buques-subcontainer">
+      <div class="buques">
+        <ul *ngFor="let item of buques" >
+          <li>
+            <img src="../../../../assets/img/{{item.img}}" alt="">
+            <div class="buque-nombre">
+              <p>{{item.nombre}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
