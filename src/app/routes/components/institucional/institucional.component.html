@@ -1,6 +1,6 @@
 <div class="institucional-container">
   <div class="title">
-    <h1 class="scaleIn">Institucional</h1>
+    <h1>Institucional</h1>
   </div>
 
   <div class="certificaciones-container">
@@ -55,6 +55,33 @@
             <div class="buque-nombre">
               <p>{{item.nombre}}</p>
             </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="personal-container">
+    <h2>Listado de personal</h2>
+    <div class="personal-subcontainer align-left">
+      <div class="personal">
+        <ul *ngFor="let item of listadoPersonal" >
+          <li>
+            <h3>{{item}}</h3>
+          </li>
+        </ul>
+      </div>
+      <img src="../../../../assets/svg/logo.svg" alt="">
+    </div>
+  </div>
+
+  <div class="marcas-container">
+    <h2>Marcas que trabajamos</h2>
+    <div class="marcas-subcontainer">
+      <div class="marcas">
+        <ul *ngFor="let item of marcas" >
+          <li>
+            <img src="../../../../assets/svg/{{item.img}}" alt="">
           </li>
         </ul>
       </div>

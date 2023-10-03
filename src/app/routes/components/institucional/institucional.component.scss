@@ -16,6 +16,8 @@
     }
   }
 
+  /* ----------------- Certificaciones ---------------------------------------------- */
+
   .certificaciones-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
@@ -52,6 +54,7 @@
       top: 20%;
       right: 40%;
       height: 70vh;
+      z-index: 1;
     }
 
     img:hover {
@@ -63,6 +66,8 @@
       display: block;
     }
   }
+
+  /* ----------------- Clientes ---------------------------------------------- */
 
   .clientes-container {
     padding: var(--padding3);
@@ -91,7 +96,7 @@
     @include flex(center, space-evenly, row);
   }
 
-
+  /* ----------------- Buques ---------------------------------------------- */
   .buques-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
@@ -118,7 +123,6 @@
           height: 20vw;
           width: 30vw;
           position: relative;
-          cursor: pointer;
         }
       }
     }
@@ -154,6 +158,83 @@
 
     .buque-nombre:hover {
       @include flex(center, center);
+    }
+  }
+
+  /* ----------------- Personal ---------------------------------------------- */
+
+  .personal-container {
+    padding: var(--padding3);
+    margin-top: var(--margin2);
+
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--dark_grey);
+      border-bottom: 2px solid var(--ligth_grey);
+    }
+
+    .personal {
+      @include flex(flex-start, space-between, column);
+      gap: var(--gap1);
+      color: var(--primary500);
+
+      ul {
+        list-style: circle;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .personal-subcontainer {
+    @include flex(flex-start, space-between, row);
+    padding: var(--padding3);
+
+    img {
+      width: 40vw;
+    }
+  }
+
+  /* ----------------- Marcas ---------------------------------------------- */
+
+  .marcas-container {
+    padding: var(--padding3);
+    margin-top: var(--margin2);
+
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--dark_grey);
+      border-bottom: 2px solid var(--ligth_grey);
+    }
+
+    .marcas {
+      @include flex(flex-start, space-between, row);
+      flex-wrap: wrap;
+      gap: var(--gap1);
+      color: var(--primary500);
+      width: fit-content;
+      height: fit-content;
+
+      ul {
+        list-style: none;
+
+        li {
+          height: 10vw;
+          width: 20vw;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .marcas-subcontainer {
+    @include flex(center, space-evenly, row);
+
+    img {
+      height: 10vw;
+      width: 20vw;
+      object-fit: contain;
     }
   }
 }
