@@ -1,7 +1,76 @@
 @import "../../../../mixins";
 
 .servicios-container {
-  min-height: 85vh;
+  min-height: 95vh;
   max-width: 100vw;
-  border: 1px solid red;
+
+
+
+
+  .title {
+    @include flex(center, center);
+    width: 100%;
+    height: 40vh;
+    background-color: var(--primary500);
+    color: white;
+    background: url("../../../../assets/img/bg-masthead2.jpg");
+    background-attachment: fixed;
+
+    h1 {
+      font-size: 50px;
+      z-index: 10;
+      margin-top: 10vh;
+    }
+
+    .filter {
+      width: 100%;
+      height: 40vh;
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 22%, rgba(9, 9, 121, 0.7) 45%, rgb(225, 245, 254, 0.7) 100%);
+    }
+  }
+
+  /* ----------------- Marcas ---------------------------------------------- */
+
+  .marcas-container {
+    padding: var(--padding3);
+    margin-top: var(--margin2);
+
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      color: var(--dark_grey);
+      border-bottom: 2px solid var(--ligth_grey);
+    }
+
+    .marcas {
+      @include flex(flex-start, space-between, row);
+      flex-wrap: wrap;
+      gap: var(--gap1);
+      color: var(--primary500);
+      width: fit-content;
+      height: fit-content;
+
+      ul {
+        list-style: none;
+
+        li {
+          height: 10vw;
+          width: 20vw;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .marcas-subcontainer {
+    @include flex(center, space-evenly, row);
+
+    img {
+      height: 10vw;
+      width: 20vw;
+      object-fit: contain;
+    }
+  }
 }

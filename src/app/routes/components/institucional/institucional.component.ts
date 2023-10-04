@@ -98,54 +98,34 @@ export class InstitucionalComponent implements OnInit {
     "Paola Rodríguez - Administrativa"
   ];
 
-  marcas = [
+  proveedores = [
     {
-      nombre: "Caterpillar",
-      img: "cat.svg"
+      nombre: "Transmisiones marinas",
+      url: "https://tmpropulsion.com/"
     },
     {
-      nombre: "Cummins",
-      img: "cummins.svg"
+      nombre: "Protto srl",
+      url: "https://proto.com.ar/"
     },
     {
-      nombre: "Deutz-fahr",
-      img: "deutz-fahr.svg"
+      nombre: "Fininng sa",
+      url: "https://www.finning.com/es_AR.html"
     },
     {
-      nombre: "MWM",
-      img: "mwm.png"
+      nombre: "Tecno disell",
+      url: "http://www.tecnodieselsrl.com/"
     },
     {
-      nombre: "Reintjes",
-      img: "reintjes.svg"
+      nombre: "Fescap",
+      url: "http://www.fescapsa.com/"
     },
     {
-      nombre: "Scania",
-      img: "scania-1.svg"
+      nombre: "Simonazi e hijos",
+      url: "https://maps.app.goo.gl/RaJV4FpWhQfKaYXf6"
     },
     {
-      nombre: "Twin-disc",
-      img: "twin-disc.svg"
-    },
-    {
-      nombre: "Volvo",
-      img: "volvo.svg"
-    },
-    {
-      nombre: "Vulkan",
-      img: "vulkan_logo.svg"
-    },
-    {
-      nombre: "Wartsila",
-      img: "wartsila.svg"
-    },
-    {
-      nombre: "Yanmar",
-      img: "yanmar-1.svg"
-    },
-    {
-      nombre: "ZF",
-      img: "zf.svg"
+      nombre: "Indumec",
+      url: "https://www.indumec.com/"
     }
   ];
 

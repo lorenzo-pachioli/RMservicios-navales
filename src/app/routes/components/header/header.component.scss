@@ -3,15 +3,20 @@
 .header-container {
   @include flex(center, space-between);
   height: 10vh;
-  padding: 0 var(--padding1);
+  width: 100%;
+  padding: var(--padding2);
   background-color: var(--grey);
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
 
   .header-title {
     gap: var(--gap1);
   }
 
   h1 {
-    color: var(--primary500);
+    color: var(--ligth_grey);
     margin: 0;
     font-weight: 500;
     font-size: 30px;
@@ -24,6 +29,7 @@
   div {
     @include flex(center, space-between, row);
     height: 100%;
+    margin-right: var(--margin2);
 
     ul {
       @include flex(center, space-between, row);
@@ -36,7 +42,7 @@
       background-image: linear-gradient(to right,
           var(--primary900),
           var(--primary900) 50%,
-          var(--dark_grey) 50%);
+          var(--ligth_grey) 50%);
       background-size: 200% 100%;
       background-position: -100%;
       display: inline-block;

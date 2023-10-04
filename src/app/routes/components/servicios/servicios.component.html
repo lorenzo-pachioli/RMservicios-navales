@@ -1,1 +1,21 @@
-<div class="servicios-container">servicios works!</div>
+<div class="servicios-container">
+
+  <div class="title">
+    <div class="filter"></div>
+    <h1>Servicios</h1>
+  </div>
+  
+
+  <div class="marcas-container">
+    <h2>Marcas que trabajamos</h2>
+    <div class="marcas-subcontainer">
+      <div class="marcas">
+        <ul *ngFor="let item of marcas" >
+          <li>
+            <img src="../../../../assets/svg/{{item.img}}" alt="">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

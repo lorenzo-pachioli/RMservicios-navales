@@ -1,5 +1,7 @@
 <div class="institucional-container">
+
   <div class="title">
+    <div class="filter"></div>
     <h1>Institucional</h1>
   </div>
 
@@ -75,16 +77,29 @@
     </div>
   </div>
 
-  <div class="marcas-container">
-    <h2>Marcas que trabajamos</h2>
-    <div class="marcas-subcontainer">
-      <div class="marcas">
-        <ul *ngFor="let item of marcas" >
+  <div class="proveedores-container">
+    <h2>Proveedores</h2>
+    <div class="proveedores-subcontainer">
+      <div class="proveedores">
+        <ul *ngFor="let item of proveedores " >
           <li>
-            <img src="../../../../assets/svg/{{item.img}}" alt="">
+            <a [href]="item.url" target="_blank" class="provedores-box">
+              <p>{{item.nombre}}</p>
+              <p class="visitar-sitio scaleIn">Visitar sitio</p>
+            </a>
           </li>
         </ul>
-      </div>
+      </div><!-- 
+      <div class="proveedores">
+        <ul *ngFor="let item of proveedores | slice:4:7; let i=index" >
+          <li>
+            <a [href]="item.url" target="_blank" class="provedores-box">
+              <p>{{item.nombre}}</p>
+              <p class="visitar-sitio scaleIn">Visitar sitio</p>
+            </a>
+          </li>
+        </ul>
+      </div> -->
     </div>
   </div>
 
