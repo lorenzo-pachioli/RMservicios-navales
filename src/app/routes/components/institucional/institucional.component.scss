@@ -157,6 +157,7 @@
       display: none;
       background-color: var(--dark_grey);
       opacity: 80%;
+      animation-play-state: paused;
 
       p {
         font-size: var(--font1);
@@ -166,10 +167,12 @@
 
     img:hover~.buque-nombre {
       @include flex(center, center);
+      animation-play-state: running;
     }
 
     .buque-nombre:hover {
       @include flex(center, center);
+      animation-play-state: running;
     }
   }
 
