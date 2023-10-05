@@ -1,4 +1,4 @@
-<div class="header-container" >
+<div #header class="header-container" >
   <div class="header-title">
     <img src="../../../../assets/svg/logo.svg" alt="">
     <h1>RM servicios navales</h1>
@@ -13,4 +13,8 @@
       </li>
     </ul>
   </div>
+
+  <button [ngClass]="['back-to-top', 'scaleInCenter', isIntoView ? 'scaleOutCenter':'']"  (click)="scrollUp()" mat-icon-button>
+    <mat-icon>navigation</mat-icon>
+  </button>
 </div>
