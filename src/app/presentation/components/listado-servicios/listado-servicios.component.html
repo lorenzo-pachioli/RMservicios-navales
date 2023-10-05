@@ -1,1 +1,16 @@
-<p>listado-servicios works!</p>
+<div class="servicios-subcontainer">
+  <div class="servicios">
+    <ul *ngFor="let item of servicios | slice:0:8; let i=index" >
+      <li>
+        <h3>{{item}}</h3>
+      </li>
+    </ul>
+  </div>
+  <div class="servicios">
+    <ul *ngFor="let item of servicios | slice:8:15; let i=index" >
+      <li>
+        <h3>{{item}}</h3>
+      </li>
+    </ul>
+  </div> 
+</div>

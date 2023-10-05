@@ -41,7 +41,9 @@ import { MaterialModule } from '../material/material.module';
   ],
   exports: [
     ObjetivosComponent,
-    MisionVisionComponent
+    MisionVisionComponent,
+    ListadoServiciosComponent,
+    TrabajosDestacadosComponent
   ]
 })
 export class PresentationModule { }

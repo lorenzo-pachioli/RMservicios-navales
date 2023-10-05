@@ -1,1 +1,12 @@
-<p>trabajos-destacados works!</p>
+<div class="trabajos-subcontainer">
+  <div class="trabajos">
+    <ul *ngFor="let item of buques" >
+      <li>
+        <img class="small-img" src="../../../../assets/img/{{item.img}}" alt="">
+        <div class="trabajos-nombre">
+          <p>{{item.nombre}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

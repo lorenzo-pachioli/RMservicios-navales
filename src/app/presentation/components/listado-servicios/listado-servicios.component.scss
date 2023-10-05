@@ -1,0 +1,16 @@
+@import "../../../../mixins";
+
+.servicios-subcontainer {
+  @include flex(center, space-evenly, row);
+
+  .servicios {
+    @include flex(flex-start, space-between, column);
+    gap: var(--gap1);
+    max-width: 30%;
+
+    ul {
+      list-style: circle;
+      color: var(--primary500);
+    }
+  }
+}

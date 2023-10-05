@@ -72,6 +72,7 @@ body {
 
   --gap1: 10px;
   --gap2: 20px;
+  --gap3: 30px;
 
   --margin1: 10px;
   --margin2: 20px;
@@ -92,6 +93,10 @@ body {
   --ligth_grey: #EEEEEE;
   --grey: #E0E0E0;
   --dark_grey: #424242;
+
+  h2 {
+    margin-bottom: var(--margin3);
+  }
 
   button {
     cursor: pointer;

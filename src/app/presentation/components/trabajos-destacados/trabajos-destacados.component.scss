@@ -1,0 +1,50 @@
+@import "../../../../mixins";
+
+.trabajos {
+  @include flex(flex-start, space-between, row);
+  flex-wrap: wrap;
+  gap: var(--gap2);
+  color: var(--primary500);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+
+  ul {
+    list-style: none;
+
+    li {
+      height: 20vw;
+      width: 22vw;
+      position: relative;
+    }
+  }
+}
+
+
+.trabajos-subcontainer {
+  @include flex(center, space-evenly, row);
+
+  .small-img {
+    height: 20vw;
+    width: 22vw;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .trabajos-nombre {
+    position: absolute;
+    bottom: 0;
+    min-height: 20%;
+    height: auto;
+    width: 22vw;
+    padding: var(--padding1);
+    background-color: rgba(9, 9, 121, 0.7);
+    border-radius: 0 0 5px 5px;
+
+
+    p {
+      font-size: var(--font2);
+      color: var(--ligth_grey);
+    }
+  }
+}
