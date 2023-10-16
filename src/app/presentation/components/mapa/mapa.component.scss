@@ -1,0 +1,9 @@
+@import '../../../../mixins';
+
+.mapa-container {
+  width: 40vw;
+  height: 40vw;
+  min-height: 550px;
+  border-radius: var(--radius1);
+  z-index: 10;
+}

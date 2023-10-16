@@ -15,7 +15,8 @@ import { MapaComponent } from './components/mapa/mapa.component';
 import { FormularioContactoComponent } from './components/formulario-contacto/formulario-contacto.component';
 import { InfoContactoComponent } from './components/info-contacto/info-contacto.component';
 import { MaterialModule } from '../material/material.module';
-
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,13 +38,17 @@ import { MaterialModule } from '../material/material.module';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    LeafletModule,
+    ReactiveFormsModule
   ],
   exports: [
     ObjetivosComponent,
     MisionVisionComponent,
     ListadoServiciosComponent,
-    TrabajosDestacadosComponent
+    TrabajosDestacadosComponent,
+    MapaComponent,
+    InfoContactoComponent
   ]
 })
 export class PresentationModule { }

@@ -2,15 +2,15 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MapaComponent } from './mapa.component';
 
-describe('MapaComponent', () => {
+describe('MapComponent', () => {
   let component: MapaComponent;
   let fixture: ComponentFixture<MapaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MapaComponent ]
+      declarations: [MapaComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(MapaComponent);
     component = fixture.componentInstance;

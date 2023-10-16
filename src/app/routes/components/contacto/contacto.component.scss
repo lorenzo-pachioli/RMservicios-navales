@@ -1,7 +1,63 @@
 @import "../../../../mixins";
 
 .contacto-container {
-  min-height: 85vh;
+  min-height: 95vh;
   max-width: 100vw;
-  border: 1px solid red;
+
+
+  .title {
+    @include flex(center, center);
+    width: 100%;
+    height: 40vh;
+    background-color: var(--primary500);
+    color: white;
+    background: url("../../../../assets/img/bg-masthead2.jpg");
+    background-attachment: fixed;
+
+    h1 {
+      font-size: 50px;
+      z-index: 10;
+      margin-top: 10vh;
+    }
+
+    .filter {
+      width: 100%;
+      height: 40vh;
+      position: absolute;
+      z-index: 2;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 22%, rgba(9, 9, 121, 0.7) 45%, rgb(225, 245, 254, 0.7) 100%);
+    }
+
+
+  }
+
+  .contacto-content {
+    @include flex(flex-start, space-between, row);
+    padding: var(--padding3);
+
+    .contact-mapa {
+      padding: var(--padding3);
+      position: relative;
+
+      .message {
+        position: absolute;
+        width: calc(40vw - (var(--margin2) * 2));
+        margin: var(--margin2);
+        padding: var(--padding1);
+        border-radius: var(--radius1);
+        background-color: var(--ligth_grey);
+        opacity: 90%;
+        z-index: 200;
+
+        p {
+          color: var(--primary500);
+          font-size: var(--font2);
+        }
+      }
+    }
+
+    app-mapa {
+      z-index: 10;
+    }
+  }
 }

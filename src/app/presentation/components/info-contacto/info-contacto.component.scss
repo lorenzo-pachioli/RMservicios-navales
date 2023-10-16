@@ -1,0 +1,41 @@
+@import '../../../../mixins';
+
+.contact-container {
+  @include flex(center, flex-start, column);
+  width: 40vw;
+  height: 40vw;
+  min-height: 550px;
+  border-radius: var(--radius1);
+  background-color: var(--ligth_grey);
+  box-sizing: border-box;
+  padding: var(--padding3);
+
+  .title {
+    color: var(--primary500);
+  }
+
+  mat-card-content {
+    border-radius: var(--radius1);
+    border: 3px solid white;
+    padding: var(--padding3);
+
+    ul {
+      width: 30vw;
+      list-style: none;
+    }
+
+    li {
+      @include flex(center, flex-start, row);
+      gap: var(--gap2);
+
+      p {
+        font-size: var(--font2);
+      }
+    }
+
+    img {
+      width: 100px;
+      fill: var(--primary900);
+    }
+  }
+}
