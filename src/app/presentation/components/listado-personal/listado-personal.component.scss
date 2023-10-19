@@ -1,0 +1,32 @@
+@import "../../../../mixins";
+
+.personal-subcontainer {
+  @include flex(flex-start, space-between, row);
+  padding: var(--padding3);
+
+  .personal {
+    @include flex(flex-start, space-between, column);
+    gap: var(--gap1);
+    color: var(--primary500);
+    margin-left: var(--margin3);
+
+    ul {
+      list-style: circle;
+      flex-grow: 1;
+    }
+  }
+
+  img {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .personal-subcontainer {
+    @include flex(flex-start, center);
+
+    img {
+      display: none;
+    }
+  }
+}

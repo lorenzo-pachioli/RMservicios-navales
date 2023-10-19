@@ -105,3 +105,34 @@
 
   }
 }
+
+@media screen and (max-width: 700px) {
+  .servicios-container {
+    .marcas-container {
+      padding: var(--padding2);
+      margin-top: var(--margin1);
+      margin-bottom: var(--margin2);
+
+      .marcas {
+        gap: var(--gap2);
+
+        ul {
+
+          li {
+            height: 20vw;
+            width: 40vw;
+          }
+        }
+      }
+    }
+
+    .marcas-subcontainer {
+
+      img {
+        height: 20vw;
+        width: 40vw;
+      }
+
+    }
+  }
+}

@@ -2,12 +2,56 @@
 
 
 .footer-container {
-  height: 5vh;
-  @include flex(center, center);
+  @include flex(center, space-between);
   background-color: var(--primary500);
   color: white;
+  padding: var(--padding3);
+
+  .title {
+    @include flex(center, space-between, row);
+    height: 20vw;
+    gap: var(--gap1);
+
+    img {
+      height: 80%;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    border-bottom: 2px solid white;
+    margin-bottom: var(--margin1);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
   p {
     margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 549px) {
+  .footer-container {
+    @include flex(center, space-between, column);
+
+    .title {
+      h1 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:550px) and (max-width: 900px) {
+  .footer-container {
+    .title {
+      h1 {
+        display: none;
+      }
+    }
   }
 }

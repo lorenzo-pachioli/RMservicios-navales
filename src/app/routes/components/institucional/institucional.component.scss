@@ -25,55 +25,18 @@
     }
   }
 
+  h2 {
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--dark_grey);
+    border-bottom: 2px solid var(--ligth_grey);
+  }
+
   /* ----------------- Certificaciones ---------------------------------------------- */
 
   .certificaciones-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
-
-    h2 {
-      font-weight: 500;
-      font-size: 30px;
-      color: var(--dark_grey);
-      border-bottom: 2px solid var(--ligth_grey);
-    }
-
-    .certificaciones {
-      @include flex(flex-start, space-between, column);
-      gap: var(--gap1);
-      color: var(--primary500);
-
-      ul {
-        list-style: circle;
-        flex-grow: 1;
-      }
-    }
-  }
-
-  .certificaciones-subcontainer {
-    @include flex(center, space-evenly, row);
-
-    img {
-      height: 30vh;
-    }
-
-    .big-certificate {
-      display: none;
-      position: fixed;
-      top: 20%;
-      right: 40%;
-      height: 70vh;
-      z-index: 100;
-    }
-
-    img:hover {
-      filter: blur(1px);
-      cursor: zoom-in;
-    }
-
-    img:hover~.big-certificate {
-      display: block;
-    }
   }
 
   /* ----------------- Clientes ---------------------------------------------- */
@@ -81,96 +44,14 @@
   .clientes-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
-
-    h2 {
-      font-weight: 500;
-      font-size: 30px;
-      color: var(--dark_grey);
-      border-bottom: 2px solid var(--ligth_grey);
-    }
-
-    .clientes {
-      @include flex(flex-start, space-between, column);
-      gap: var(--gap1);
-      max-width: 30%;
-
-      ul {
-        list-style: circle;
-        color: var(--primary500);
-      }
-    }
   }
 
-  .clientes-subcontainer {
-    @include flex(center, space-evenly, row);
-  }
+
 
   /* ----------------- Buques ---------------------------------------------- */
   .buques-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
-
-    h2 {
-      font-weight: 500;
-      font-size: 30px;
-      color: var(--dark_grey);
-      border-bottom: 2px solid var(--ligth_grey);
-    }
-
-    .buques {
-      @include flex(flex-start, space-between, row);
-      flex-wrap: wrap;
-      gap: var(--gap1);
-      color: var(--primary500);
-      width: fit-content;
-      height: fit-content;
-
-      ul {
-        list-style: none;
-
-        li {
-          height: 20vw;
-          width: 30vw;
-          position: relative;
-        }
-      }
-    }
-  }
-
-  .buques-subcontainer {
-    @include flex(center, space-evenly, row);
-
-    img {
-      height: 20vw;
-      width: 30vw;
-      object-fit: cover;
-    }
-
-    .buque-nombre {
-      position: absolute;
-      top: 0;
-      height: 20vw;
-      width: 30vw;
-      display: none;
-      background-color: var(--dark_grey);
-      opacity: 80%;
-      animation-play-state: paused;
-
-      p {
-        font-size: var(--font1);
-        color: var(--ligth_grey);
-      }
-    }
-
-    img:hover~.buque-nombre {
-      @include flex(center, center);
-      animation-play-state: running;
-    }
-
-    .buque-nombre:hover {
-      @include flex(center, center);
-      animation-play-state: running;
-    }
   }
 
   /* ----------------- Personal ---------------------------------------------- */
@@ -178,34 +59,6 @@
   .personal-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
-
-    h2 {
-      font-weight: 500;
-      font-size: 30px;
-      color: var(--dark_grey);
-      border-bottom: 2px solid var(--ligth_grey);
-    }
-
-    .personal {
-      @include flex(flex-start, space-between, column);
-      gap: var(--gap1);
-      color: var(--primary500);
-      margin-left: var(--margin3);
-
-      ul {
-        list-style: circle;
-        flex-grow: 1;
-      }
-    }
-  }
-
-  .personal-subcontainer {
-    @include flex(flex-start, space-between, row);
-    padding: var(--padding3);
-
-    img {
-      width: 40vw;
-    }
   }
 
   /* ----------------- proveedores ---------------------------------------------- */
@@ -213,66 +66,5 @@
   .proveedores-container {
     padding: var(--padding3);
     margin-top: var(--margin2);
-
-    h2 {
-      font-weight: 500;
-      font-size: 30px;
-      color: var(--dark_grey);
-      border-bottom: 2px solid var(--ligth_grey);
-    }
-
-    .proveedores {
-      @include flex(flex-start, space-between, row);
-      flex-wrap: wrap;
-      gap: var(--gap2);
-      color: var(--primary500);
-      width: fit-content;
-      height: fit-content;
-
-      ul {
-        list-style: none;
-      }
-
-    }
-  }
-
-  .proveedores-subcontainer {
-    @include flex(flex-start, space-between, row);
-
-    .provedores-box {
-      @include flex(center, center, column);
-      height: 10vw;
-      width: 30vw;
-      border-radius: var(--radius1);
-      background-color: var(--ligth_grey);
-      cursor: pointer;
-      text-decoration: none;
-      transition: 0.5s all ease-in-out;
-
-      p {
-        text-align: center;
-        color: var(--primary900);
-      }
-
-      .visitar-sitio {
-        display: none;
-        color: var(--dark_grey);
-        animation-duration: 0.5s;
-      }
-    }
-
-    .provedores-box:hover {
-      box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
-
-      p {
-        font-size: large;
-      }
-
-      .visitar-sitio {
-        display: block;
-        color: var(--dark_grey);
-        font-size: medium;
-      }
-    }
   }
 }

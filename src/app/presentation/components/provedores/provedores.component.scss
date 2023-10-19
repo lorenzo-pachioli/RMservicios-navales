@@ -1,0 +1,66 @@
+@import "../../../../mixins";
+
+.proveedores-subcontainer {
+  @include flex(flex-start, space-between, row);
+
+  .proveedores {
+    @include flex(flex-start, space-between, row);
+    flex-wrap: wrap;
+    gap: var(--gap2);
+    color: var(--primary500);
+    width: fit-content;
+    height: fit-content;
+
+    ul {
+      list-style: none;
+    }
+
+  }
+
+  .provedores-box {
+    @include flex(center, center, column);
+    height: 10vw;
+    width: 30vw;
+    border-radius: var(--radius1);
+    background-color: var(--ligth_grey);
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+
+    p {
+      text-align: center;
+      color: var(--primary900);
+    }
+
+    .visitar-sitio {
+      display: none;
+      color: var(--dark_grey);
+      animation-duration: 0.5s;
+    }
+  }
+
+  .provedores-box:hover {
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
+
+    p {
+      font-size: large;
+    }
+
+    .visitar-sitio {
+      display: block;
+      color: var(--dark_grey);
+      font-size: medium;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .proveedores-subcontainer {
+    .provedores-box {
+      @include flex(center, center, column);
+      height: 15vw;
+      width: 40vw;
+    }
+  }
+
+}

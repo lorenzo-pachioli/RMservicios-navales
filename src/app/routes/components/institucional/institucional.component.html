@@ -2,105 +2,32 @@
 
   <div class="title">
     <div class="filter"></div>
-    <h1 >Institucional</h1>
+    <h1>Institucional</h1>
   </div>
 
   <div class="certificaciones-container">
     <h2>Certificaciones</h2>
-    <div class="certificaciones-subcontainer">
-      <div class="certificaciones">
-        <ul *ngFor="let item of certificaciones" >
-          <li>
-            <h3>{{item}}</h3>
-          </li>
-        </ul>
-      </div>
-      <img src="../../../../assets/img/certificado.png" alt="">
-      <img class="big-certificate fadeInUp" src="../../../../assets/img/certificado.png" alt="">
-    </div>
+    <app-certificaciones [certificaciones]="certificaciones"></app-certificaciones>
   </div>
 
   <div class="clientes-container">
     <h2>Clientes</h2>
-    <div class="clientes-subcontainer">
-      <div class="clientes">
-        <ul *ngFor="let item of clientes | slice:0:3; let i=index" >
-          <li>
-            <h3>{{item}}</h3>
-          </li>
-        </ul>
-      </div>
-      <div class="clientes">
-        <ul *ngFor="let item of clientes | slice:3:6; let i=index" >
-          <li>
-            <h3>{{item}}</h3>
-          </li>
-        </ul>
-      </div>
-      <div class="clientes">
-        <ul *ngFor="let item of clientes | slice:6:9; let i=index" >
-          <li>
-            <h3>{{item}}</h3>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <app-clientes [clientes]="clientes"></app-clientes>
   </div>
 
   <div class="buques-container">
     <h2>Listado de buques</h2>
-    <div class="buques-subcontainer">
-      <div class="buques">
-        <ul *ngFor="let item of buques" >
-          <li>
-            <img src="../../../../assets/img/{{item.img}}" alt="">
-            <div class="buque-nombre scaleInCenter">
-              <p>{{item.nombre}}</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <app-listado-buques [buques]="buques"></app-listado-buques>
   </div>
 
   <div class="personal-container">
     <h2>Listado de personal</h2>
-    <div class="personal-subcontainer align-left">
-      <div class="personal">
-        <ul *ngFor="let item of listadoPersonal" >
-          <li>
-            <h3>{{item}}</h3>
-          </li>
-        </ul>
-      </div>
-      <img src="../../../../assets/svg/logo.svg" alt="">
-    </div>
+    <app-listado-personal [listadoPersonal]="listadoPersonal"></app-listado-personal>
   </div>
 
   <div class="proveedores-container">
     <h2>Proveedores</h2>
-    <div class="proveedores-subcontainer">
-      <div class="proveedores">
-        <ul *ngFor="let item of proveedores " >
-          <li>
-            <a [href]="item.url" target="_blank" class="provedores-box">
-              <p>{{item.nombre}}</p>
-              <p class="visitar-sitio scaleIn">Visitar sitio</p>
-            </a>
-          </li>
-        </ul>
-      </div><!-- 
-      <div class="proveedores">
-        <ul *ngFor="let item of proveedores | slice:4:7; let i=index" >
-          <li>
-            <a [href]="item.url" target="_blank" class="provedores-box">
-              <p>{{item.nombre}}</p>
-              <p class="visitar-sitio scaleIn">Visitar sitio</p>
-            </a>
-          </li>
-        </ul>
-      </div> -->
-    </div>
+    <app-provedores [proveedores]="proveedores"></app-provedores>
   </div>
 
 </div>

@@ -1,0 +1,35 @@
+@import "../../../../mixins";
+
+.clientes-subcontainer {
+  @include flex(center, space-evenly, row);
+
+  .clientes {
+    @include flex(flex-start, space-between, column);
+    gap: var(--gap1);
+    max-width: 30%;
+
+    ul {
+      list-style: circle;
+      color: var(--primary500);
+    }
+  }
+
+  .mobile {
+    display: none;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .clientes-subcontainer {
+    @include flex(center, center);
+
+    .clientes {
+      display: none;
+    }
+
+    .mobile {
+      @include flex(flex-start, center, column);
+    }
+  }
+}

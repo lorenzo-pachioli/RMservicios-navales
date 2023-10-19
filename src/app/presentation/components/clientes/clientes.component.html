@@ -1,1 +1,31 @@
-<p>clientes works!</p>
+<div class="clientes-subcontainer">
+  <div class="clientes">
+    <ul *ngFor="let item of clientes | slice:0:3; let i=index" >
+      <li>
+        <h3>{{item}}</h3>
+      </li>
+    </ul>
+  </div>
+  <div class="clientes">
+    <ul *ngFor="let item of clientes | slice:3:6; let i=index" >
+      <li>
+        <h3>{{item}}</h3>
+      </li>
+    </ul>
+  </div>
+  <div class="clientes">
+    <ul *ngFor="let item of clientes | slice:6:9; let i=index" >
+      <li>
+        <h3>{{item}}</h3>
+      </li>
+    </ul>
+  </div>
+
+  <div class="clientes mobile">
+    <ul *ngFor="let item of clientes; let i=index" >
+      <li>
+        <h3>{{item}}</h3>
+      </li>
+    </ul>
+  </div>
+</div>

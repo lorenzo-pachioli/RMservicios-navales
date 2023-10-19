@@ -1,1 +1,12 @@
-<p>provedores works!</p>
+<div class="proveedores-subcontainer">
+  <div class="proveedores">
+    <ul *ngFor="let item of proveedores " >
+      <li>
+        <a [href]="item.url" target="_blank" class="provedores-box">
+          <p>{{item.nombre}}</p>
+          <p class="visitar-sitio scaleIn">Visitar sitio</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

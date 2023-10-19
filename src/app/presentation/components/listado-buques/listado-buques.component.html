@@ -1,1 +1,12 @@
-<p>listado-buques works!</p>
+<div class="buques-subcontainer">
+  <div class="buques">
+    <ul *ngFor="let item of buques" >
+      <li>
+        <img src="../../../../assets/img/{{item.img}}" alt="">
+        <div class="buque-nombre scaleInCenter">
+          <p>{{item.nombre}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

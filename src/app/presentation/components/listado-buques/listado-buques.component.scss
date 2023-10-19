@@ -1,0 +1,87 @@
+@import "../../../../mixins";
+
+.buques-subcontainer {
+  @include flex(center, space-evenly, row);
+
+  .buques {
+    @include flex(flex-start, space-between, row);
+    flex-wrap: wrap;
+    gap: var(--gap1);
+    color: var(--primary500);
+    width: fit-content;
+    height: fit-content;
+
+    ul {
+      list-style: none;
+
+      li {
+        height: 20vw;
+        width: 30vw;
+        position: relative;
+      }
+    }
+  }
+
+  img {
+    height: 20vw;
+    width: 30vw;
+    object-fit: cover;
+  }
+
+  .buque-nombre {
+    position: absolute;
+    top: 0;
+    height: 20vw;
+    width: 30vw;
+    display: none;
+    background-color: var(--dark_grey);
+    opacity: 80%;
+    animation-play-state: paused;
+
+    p {
+      font-size: var(--font1);
+      color: var(--ligth_grey);
+    }
+  }
+
+  img:hover~.buque-nombre {
+    @include flex(center, center);
+    animation-play-state: running;
+  }
+
+  .buque-nombre:hover {
+    @include flex(center, center);
+    animation-play-state: running;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .buques-subcontainer {
+
+    .buques {
+
+      ul {
+
+        li {
+          height: 25vw;
+          width: 40vw;
+        }
+      }
+    }
+
+    img {
+      height: 25vw;
+      width: 40vw;
+    }
+
+    .buque-nombre {
+      height: 25vw;
+      width: 40vw;
+
+      p {
+        font-size: var(--font2);
+      }
+    }
+  }
+
+}
