@@ -4,9 +4,9 @@
     <h1>RM servicios navales</h1>
   </div>
 
-  <div>
+  <div class="menu_desktop">
     <ul>
-      <li *ngFor="let item of menu" >
+      <li *ngFor="let item of menu_desktop" >
             <button mat-button routerLink="{{ item }}" routerLinkActive="active">
               {{ item }}
             </button>
@@ -17,4 +17,19 @@
   <button [ngClass]="['back-to-top', 'scaleInCenter', isIntoView ? 'scaleOutCenter':'']"  (click)="scrollUp()" mat-icon-button>
     <mat-icon>navigation</mat-icon>
   </button>
+
+  <button mat-icon-button #t="matMenuTrigger" class="mobile-view" [matMenuTriggerFor]="menu">
+    <mat-icon *ngIf="!t.menuOpen; else clear">menu</mat-icon>
+    <ng-template #clear><mat-icon>clear</mat-icon></ng-template>
+  </button>
+  
+  <mat-menu #menu="matMenu" color="primary" class="menu-mobile mobile-view ">
+    <ul class="menu-mobile">
+      <li *ngFor="let item of menu_desktop" >
+            <button mat-button routerLink="{{ item }}" routerLinkActive="active" class="mobile-button">
+              {{ item }}
+            </button>
+      </li>
+    </ul>
+  </mat-menu>
 </div>

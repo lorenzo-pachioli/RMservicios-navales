@@ -7,18 +7,25 @@ import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular
 })
 export class HeaderComponent implements OnInit {
 
-  menu = ['inicio', 'institucional', 'servicios', 'contacto'];
+  isMenuOpen: Boolean = true;
+  menu_desktop = ['inicio', 'institucional', 'servicios', 'contacto'];
   @ViewChild('header', { static: false }) private header?: ElementRef<HTMLDivElement>;
   isIntoView: boolean = true;
 
   @HostListener('window:scroll', ['$event'])
   isScrolledIntoView() {
+
     if (this.header) {
       const rect = this.header.nativeElement.getBoundingClientRect();
       const topShown = rect.top >= 0;
       const bottomShown = rect.bottom <= window.innerHeight;
       this.isIntoView = topShown && bottomShown;
     }
+  }
+
+  setIsMenuOpen(newValue: boolean) {
+    this.isMenuOpen = newValue;
+    console.log(this.isMenuOpen);
   }
 
   constructor() {
@@ -36,7 +43,7 @@ export class HeaderComponent implements OnInit {
   }
 
   isInViewport(elem: any) {
-    var distance = elem.getBoundingClientRect();
+    let distance = elem.getBoundingClientRect();
     return (
       distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0
     );
