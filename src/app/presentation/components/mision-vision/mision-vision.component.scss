@@ -2,7 +2,7 @@
 
 .mision-vision-container {
   @include flex(center, space-evenly, row);
-  margin: 0;
+  margin: var(--margin2) 0;
   width: 100%;
   gap: var(--gap2);
   border: 2px solid var(--ligth_grey);

@@ -8,7 +8,7 @@
   background-color: var(--grey);
   position: absolute;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   background-color: transparent;
 
   .header-title {
@@ -140,7 +140,7 @@
     background-color: var(--grey);
     position: absolute;
     top: 0;
-    z-index: 100;
+    z-index: 200;
     background-color: transparent;
 
     .header-title {

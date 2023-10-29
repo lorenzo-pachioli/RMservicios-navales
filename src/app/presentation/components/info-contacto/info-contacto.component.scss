@@ -1,9 +1,9 @@
 @import '../../../../mixins';
 
 .contact-container {
-  @include flex(center, flex-start, column);
+  @include flex(center, space-between, column);
   width: 40vw;
-  height: fit-content;
+  height: 100vh;
   min-height: 550px;
   border-radius: var(--radius1);
   background-color: var(--ligth_grey);
@@ -12,6 +12,10 @@
 
   .title {
     color: var(--primary500);
+  }
+
+  h2 {
+    margin-bottom: var(--margin1);
   }
 
   mat-card-content {
@@ -40,10 +44,10 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .contact-container {
     @include flex(center, flex-start, column);
-    width: 85vw;
+    width: 90vw;
     height: fit-content;
     min-height: 550px;
     padding: var(--padding1);
@@ -59,6 +63,12 @@
       li {
         @include flex(center, flex-start, column);
         gap: var(--gap2);
+
+        p {
+          font-size: var(--font2);
+          max-width: 75vw;
+          word-break: break-all;
+        }
       }
     }
   }

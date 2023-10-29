@@ -28,7 +28,7 @@
 
   .objetivos-container {
     padding: var(--padding3);
-    margin-top: var(--margin3);
+    margin: var(--margin3) 0;
     width: 100%;
 
     h2 {
@@ -49,6 +49,11 @@
         width: 100%;
       }
     }
+  }
+
+  .mision-container {
+    padding: var(--padding3);
+    margin: var(--margin3) 0;
   }
 }
 

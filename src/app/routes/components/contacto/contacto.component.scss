@@ -44,7 +44,7 @@
         border-radius: var(--radius1);
         background-color: var(--ligth_grey);
         opacity: 90%;
-        z-index: 200;
+        z-index: 150;
 
         p {
           color: var(--primary500);
@@ -64,18 +64,18 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .contacto-container {
     .contacto-content {
-      @include flex(flex-start, center, column);
+      @include flex(center, flex-start, column);
       padding: 0;
       height: fit-content;
 
       .contact-mapa {
-        padding: var(--padding3);
+        padding: var(--padding1);
 
         .message {
-          width: calc(85vw);
+          width: 90vw;
           margin: 0;
           padding: 0;
 
