@@ -42,6 +42,9 @@
           },
           "configurations": {
             "production": {
+              "customWebpackConfig": {
+                "path": "src/custom-webpack.config.ts"
+              },
               "budgets": [
                 {
                   "type": "initial",
