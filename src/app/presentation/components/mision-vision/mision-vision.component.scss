@@ -23,3 +23,27 @@
     color: var(--dark_grey);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .mision-vision-container {
+    @include flex(center, space-evenly, column);
+    width: 100%;
+    gap: var(--gap2);
+
+    mat-card-title {
+      @include flex(center, center);
+      color: white;
+      width: 95%;
+      height: 15vh;
+      border-radius: 5px;
+      margin: 0;
+      font-size: 40px;
+    }
+
+    mat-card-content {
+      width: 95%;
+      font-size: 20px;
+      color: var(--dark_grey);
+    }
+  }
+}

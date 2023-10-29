@@ -58,8 +58,8 @@
   .proveedores-subcontainer {
     .provedores-box {
       @include flex(center, center, column);
-      height: 15vw;
-      width: 40vw;
+      height: 20vw;
+      width: 90vw;
     }
   }
 

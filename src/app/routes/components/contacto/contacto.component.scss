@@ -12,6 +12,7 @@
     background-color: var(--primary500);
     color: white;
     background: url("../../../../assets/img/bg-masthead2.jpg");
+    background-size: cover;
     background-attachment: fixed;
 
     h1 {
@@ -24,8 +25,6 @@
       width: 100%;
       height: 40vh;
     }
-
-
   }
 
   .contacto-content {
@@ -35,6 +34,7 @@
     .contact-mapa {
       padding: var(--padding3);
       position: relative;
+      height: 100%;
 
       .message {
         position: absolute;
@@ -55,6 +55,35 @@
 
     app-mapa {
       z-index: 10;
+    }
+
+    .mapa {
+      min-height: 95vh;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contacto-container {
+    .contacto-content {
+      @include flex(flex-start, center, column);
+      padding: 0;
+      height: fit-content;
+
+      .contact-mapa {
+        padding: var(--padding3);
+
+        .message {
+          width: calc(85vw);
+          margin: 0;
+          padding: 0;
+
+          p {
+            padding: var(--padding1);
+          }
+        }
+      }
     }
   }
 }

@@ -29,6 +29,7 @@
   .objetivos-container {
     padding: var(--padding3);
     margin-top: var(--margin3);
+    width: 100%;
 
     h2 {
       font-weight: 500;
@@ -40,25 +41,55 @@
     .objetivos {
       @include flex(center, space-between, row);
       gap: var(--gap1);
+      width: 100%;
 
       ul {
         list-style: none;
         flex-grow: 1;
+        width: 100%;
       }
     }
   }
+}
 
-  .mision-container {
-    width: 100%;
-    padding: var(--padding3);
-    @include flex(flex-start, center, column);
-    margin-top: var(--margin3);
-    height: fit-content;
-    gap: var(--gap2);
+@media screen and (max-width: 900px) {
+  .inicio-container {
 
-    app-mision-vision {
-      width: 100%;
+    .title {
+      background-color: transparent;
+      z-index: 3;
+      width: 90%;
+      margin: 60px 0 30px 20px;
+
+      h1 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 30px;
+        margin-top: 10vh;
+      }
     }
+
+    .objetivos-container {
+
+      .objetivos {
+        @include flex(center, space-between, column);
+        gap: var(--gap1);
+      }
+    }
+
+    .mision-container {
+      width: 100%;
+      padding: var(--padding3);
+      @include flex(flex-start, center, column);
+      margin-top: var(--margin3);
+      height: fit-content;
+      gap: var(--gap2);
+
+      app-mision-vision {
+        width: 100%;
+      }
+    }
+
   }
 
 }

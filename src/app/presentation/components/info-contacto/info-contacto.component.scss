@@ -3,7 +3,7 @@
 .contact-container {
   @include flex(center, flex-start, column);
   width: 40vw;
-  height: 40vw;
+  height: fit-content;
   min-height: 550px;
   border-radius: var(--radius1);
   background-color: var(--ligth_grey);
@@ -25,7 +25,7 @@
     }
 
     li {
-      @include flex(center, flex-start, row);
+      @include flex(center, flex-start, column);
       gap: var(--gap2);
 
       p {
@@ -36,6 +36,30 @@
     img {
       width: 100px;
       fill: var(--primary900);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-container {
+    @include flex(center, flex-start, column);
+    width: 85vw;
+    height: fit-content;
+    min-height: 550px;
+    padding: var(--padding1);
+
+    mat-card-content {
+      /* border: none; */
+      padding: var(--padding1);
+
+      ul {
+        width: 75vw;
+      }
+
+      li {
+        @include flex(center, flex-start, column);
+        gap: var(--gap2);
+      }
     }
   }
 }

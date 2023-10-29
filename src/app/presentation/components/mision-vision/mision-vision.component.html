@@ -1,4 +1,4 @@
-<mat-card class="mision-vision-container" [ngStyle]="{'flex-direction': flexDirection()}">
+<mat-card class="mision-vision-container" (window:resize)="onResize($event)" [ngStyle]="{'flex-direction': flexDirection()}">
   <mat-card-title [ngStyle]="{'background-color': backgroundcolor}">{{title}}</mat-card-title>
   <mat-card-content>
     {{text}}
