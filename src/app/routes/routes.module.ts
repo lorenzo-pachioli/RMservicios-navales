@@ -10,8 +10,6 @@ import { AppRoutingModule } from '../app-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { PresentationModule } from '../presentation/presentation.module';
 
-
-
 @NgModule({
   declarations: [
     InicioComponent,
