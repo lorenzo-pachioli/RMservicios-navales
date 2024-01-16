@@ -1,11 +1,11 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mision-vision',
   templateUrl: './mision-vision.component.html',
   styleUrls: ['./mision-vision.component.scss']
 })
-export class MisionVisionComponent implements OnInit {
+export class MisionVisionComponent {
 
   width = window.innerWidth;
   @Input() title = '';
@@ -16,9 +16,6 @@ export class MisionVisionComponent implements OnInit {
     this.width = event.target.innerWidth;
   }
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   flexDirection() {
     if (this.width > 800) {

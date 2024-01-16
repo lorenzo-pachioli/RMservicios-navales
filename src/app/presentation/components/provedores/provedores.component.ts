@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface iProvedores {
   nombre: string,
@@ -9,12 +9,9 @@ interface iProvedores {
   templateUrl: './provedores.component.html',
   styleUrls: ['./provedores.component.scss']
 })
-export class ProvedoresComponent implements OnInit {
+export class ProvedoresComponent {
 
   @Input() proveedores: iProvedores[] = [];
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
